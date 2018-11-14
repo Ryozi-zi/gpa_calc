@@ -6,22 +6,20 @@ var app = new Vue({
     allGpaSum: 0,
     gpaPoints: {
       // gpaの各ポイントの定義
-      a: 4, am: 3.7, bp: 3.3, b: 3, bm: 2.7, cp: 2.3, c: 2, cm: 1.7, dp: 1.3, d: 1.0, dm: 0.7
+      a: 4,
+      am: 3.7,
+      bp: 3.3,
+      b: 3,
+      bm: 2.7,
+      cp: 2.3,
+      c: 2,
+      cm: 1.7,
+      dp: 1.3,
+      d: 1.0,
+      dm: 0.7
     },
     gpa:{
-      a: 0,
-      am: 0,
-      bp: 0,
-      b: 0,
-      bm: 0,
-      cp: 0,
-      c: 0,
-      cm: 0,
-      dp: 0,
-      d: 0,
-      dm: 0
-    },
-    gpaSum: {
+      // 各gpaの獲得単位数
       a: 0,
       am: 0,
       bp: 0,
@@ -36,9 +34,11 @@ var app = new Vue({
     }
   },
   computed: {
-    Aave: function () {
+    // GPAを算出
+    GPAe: function () {
       return Math.floor(this.allGpaSum / this.totalCredit * 100) / 100
     },
+    // 総合獲得単位数を算出
     totalCredit: function () {
       this.credits = 0
       for ( var key in this.gpa ) {
@@ -46,6 +46,7 @@ var app = new Vue({
       }
       return this.credits
     },
+    // gpaとgpaPointsをかけたものをさらにかけ合わせる
     sumGpaGrade: function () {
       this.allGpaSum = 0
       for ( var key in this.gpa ){
