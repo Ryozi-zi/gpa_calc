@@ -1,0 +1,106 @@
+
+html{
+  font-size: 62.5%;
+  font-family: Helvetica;
+}
+
+main{
+  padding-top: 50px;
+  width: 100%;
+  .wrapper{
+    width: 50%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    @media screen and (max-width: 480px){
+      width: 80%;
+    }
+    .boxes{
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      @media screen and (max-width: 480px){
+        width: 100%;
+      }
+      .box{
+        text-align: center;
+        width: 25%;
+        padding: 30px 30px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 2px rgb(163, 163, 163);
+        @media screen and (max-width: 480px){
+          width: 100%;
+        }
+        .box_title{
+          font-size: 5rem;
+          color: white;
+          padding-bottom: 10px;
+          font-weight: bold;
+        }
+        .gpa{
+          font-size: 4rem;
+          color: white;
+          padding-bottom: 10px;
+          font-weight: bold;
+        }
+        .buttons{
+          text-align: center;
+          display: flex;
+          width: 100%;
+          .plus_button{
+            color: white;
+            width: 50%;
+          }
+          .minus_button{
+            color: white;
+            width:50%;
+          }
+        }
+      }
+      .ap{
+        background: linear-gradient(#ff6833, #ff6854);
+      }
+      .a{
+        background: linear-gradient(#ff6854, #ffb454);
+      }
+      .am{
+        background: linear-gradient(#ffb454, #ffeb54);
+      }
+      .bp{
+        background: linear-gradient(#ffeb54, #d7ff54);
+      }
+      .b{
+        background: linear-gradient(#d7ff54, #a3ff54);
+      }
+      .bm{
+        background: linear-gradient(#a3ff54, #54ff56);
+      }
+      .cp{
+        background: linear-gradient(#a3ff54, #54ff56);
+      }
+      .c{
+        background: linear-gradient(#54ff56, #4fffa1);
+      }
+      .cm{
+        background: linear-gradient(#4fffa1, #4fffca);
+      }
+      .dp{
+        background: linear-gradient(#4fffca, #4fffea);
+      }
+      .d{
+        background: linear-gradient(#4fffea, #4fe7ff);
+      }
+      .dm{
+        background: linear-gradient(#4fe7ff, #4fafff);
+      }
+      .f{
+        background-color: #8c8c8c;
+      }
+    }
+  }
+}
+
+.far{
+  font-size: 4rem;
+  cursor: pointer;
+}
