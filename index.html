@@ -6,10 +6,122 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>GPA-Calc</title>
   <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="./main.scss">
+  <link rel="stylesheet" href="./main.min.css">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
   <div id="app">
+    <main>
+      <div class="wrapper">
+        <div class="boxes">
+          <div class="box ap">
+            <h2 class="box_title">A+</h2>
+            <p class="gpa">{{ this.gpa.ap }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('ap')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('ap')"></i></div>
+            </div>
+          </div>
+          <div class="box a">
+            <h2 class="box_title">A</h2>
+            <p class="gpa">{{ this.gpa.a }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('a')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('a')"></i></div>
+            </div>
+          </div>
+          <div class="box am">
+            <h2 class="box_title">A-</h2>
+            <p class="gpa">{{ this.gpa.am }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('am')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('am')"></i></div>
+            </div>
+          </div>
+          <div class="box bp">
+            <h2 class="box_title">B+</h2>
+            <p class="gpa">{{ this.gpa.bp }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('bp')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('bp')"></i></div>
+            </div>
+          </div>
+          <div class="box b">
+            <h2 class="box_title">B</h2>
+            <p class="gpa">{{ this.gpa.b }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('b')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('b')"></i></div>
+            </div>
+          </div>
+          <div class="box bm">
+            <h2 class="box_title">B-</h2>
+            <p class="gpa">{{ this.gpa.bm }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('bm')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('bm')"></i></div>
+            </div>
+          </div>
+          <div class="box cp">
+            <h2 class="box_title">C+</h2>
+            <p class="gpa">{{ this.gpa.cp }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('cp')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('cp')"></i></div>
+            </div>
+          </div>
+          <div class="box c">
+            <h2 class="box_title">C</h2>
+            <p class="gpa">{{ this.gpa.c }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('c')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('c')"></i></div>
+            </div>
+          </div>
+          <div class="box cm">
+            <h2 class="box_title">C-</h2>
+            <p class="gpa">{{ this.gpa.cm }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('cm')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('cm')"></i></div>
+            </div>
+          </div>
+          <div class="box dp">
+            <h2 class="box_title">D+</h2>
+            <p class="gpa">{{ this.gpa.dp }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('dp')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('dp')"></i></div>
+            </div>
+          </div>
+          <div class="box d">
+            <h2 class="box_title">D</h2>
+            <p class="gpa">{{ this.gpa.d }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('d')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('d')"></i></div>
+            </div>
+          </div>
+          <div class="box dm">
+            <h2 class="box_title">D-</h2>
+            <p class="gpa">{{ this.gpa.dm }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('dm')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('dm')"></i></div>
+            </div>
+          </div>
+          <div class="box f">
+            <h2 class="box_title">F</h2>
+            <p class="gpa">{{ this.gpa.f }}</p>
+            <div class="buttons">
+              <div class="plus_button"><i class="far fa-plus-square" v-on:click="plusGrade('f')"></i></div>
+              <div class="minus_button"><i class="far fa-minus-square" v-on:click="minusGrade('f')"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <p>accumulated GPA</p>
     <input type="number" v-model.number="gpagot">
     <p>Credit got so far</p>
