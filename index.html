@@ -10,8 +10,15 @@
 </head>
 <body>
   <div id="app">
+    <p>accumulated GPA</p>
+    <input type="number" v-model.number="gpagot">
+    <p>Credit got so far</p>
+    <input type="number" v-model.number="creditsgot">
+    <p>A</p>
     <input type="number" v-model.number="gpa.a">
+    <p>B</p>
     <input type="number" v-model.number="gpa.b">
+    <p>C</p>
     <input type="number" v-model.number="gpa.c">
     <p>{{ GPAe }}</p>
     <p>{{ totalCredit }}</p>
