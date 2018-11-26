@@ -18,7 +18,8 @@ var app = new Vue({
       cm: 1.7,
       dp: 1.3,
       d: 1.0,
-      dm: 0.7
+      dm: 0.7,
+      f: 0
     },
     gpa:{
       // 各gpaの獲得単位数
@@ -32,7 +33,8 @@ var app = new Vue({
       cm: 0,
       dp: 0,
       d: 0,
-      dm: 0
+      dm: 0,
+      f: 0
     }
   },
   computed: {
@@ -57,6 +59,14 @@ var app = new Vue({
       }
       this.allGpaSum += this.gpagot * this.creditsgot
       return this.allGpaSum
+    }
+  },
+  methods: {
+    plusGrade: function ( grade ) {
+      this.gpa[grade]++
+    },
+    minusGrade: function ( grade ){
+      this.gpa[grade]--
     }
   }
 })
