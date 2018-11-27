@@ -12,8 +12,27 @@
 </head>
 <body>
   <div id="app">
+    <header>
+      <h1 id="header_title">GDP calculator for AIU students</h1>
+    </header>
     <main>
       <div class="wrapper">
+        <div class="expected">
+          <h2>Expected GPA</h2>
+          <p class="expected_gpa">{{ GPAe }}</p>
+          <h2>Total Credits</h2>
+          <p class="total_credit">{{ totalCredit }}</p>
+        </div>
+        <div class="cumulative">
+          <div class="cumulative_gpa clearfix">
+            <p class="title">Cumulative GPA</p>
+            <input type="number" v-model.number="gpagot">
+          </div>
+          <div class="cumulative_credit clearfix">
+            <p class="title">Credits got</p>
+            <input type="number" v-model.number="creditsgot">
+          </div>
+        </div>
         <div class="boxes">
           <div class="box ap">
             <h2 class="box_title">A+</h2>
@@ -122,20 +141,9 @@
         </div>
       </div>
     </main>
-    <p>accumulated GPA</p>
-    <input type="number" v-model.number="gpagot">
-    <p>Credit got so far</p>
-    <input type="number" v-model.number="creditsgot">
-    <p>A</p>
-    <input type="number" v-model.number="gpa.a">
-    <p>B</p>
-    <input type="number" v-model.number="gpa.b">
-    <p>C</p>
-    <input type="number" v-model.number="gpa.c">
-    <p>{{ GPAe }}</p>
-    <p>{{ totalCredit }}</p>
-    <p>{{ this.gpa.a }}</p>
-    <p>{{ sumGpaGrade }}</p>
+    <footer>
+      <p>by Ryozi-zi</p>
+    </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="./main.js"></script>

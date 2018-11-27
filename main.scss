@@ -1,29 +1,118 @@
 
 html{
   font-size: 62.5%;
-  font-family: Helvetica;
+  font-family: Helvetica, Meiryo;
+}
+
+// inputnumberのスピンボタン削除
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance:textfield;
+}
+
+header{
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #4c4c4c;
+  @media screen and (max-width: 480px){
+    height: 70px;
+  }
+  #header_title{
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+  }
 }
 
 main{
+  background: linear-gradient(135deg, #4f63ff, #7ad4f4, #34c1c1);
   padding-top: 50px;
   width: 100%;
+  @media screen and (max-width: 480px){
+    padding-top: 15px;
+  }
   .wrapper{
     width: 50%;
     margin: 0 auto;
     box-sizing: border-box;
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 800px){
       width: 80%;
+    }
+    .expected{
+      width: 100%;
+      font-weight: bold;
+      h2{
+        color: white;
+        font-size: 5rem;
+        width: 100%;
+        padding-top: 15px
+      }
+      .total_credit, .expected_gpa{
+        text-align: right;
+        color: white;
+        font-size: 4rem;
+        padding-bottom: 10px;
+        width: 100%;
+        border-bottom: 2px dotted #eee;
+      }
+    }
+    .cumulative{
+      padding: 20px 0 0 0;
+      .cumulative_gpa, .cumulative_credit{
+        box-shadow: 0 0 10px 2px rgb(163, 163, 163);
+        background: linear-gradient(170deg, #f98e1b, #f4e361);
+        margin-bottom: 15px;
+        border-radius: 5px;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+        @media screen and (max-width: 480px){
+          .title{
+            width: 100%;
+          }
+          input{
+            width: 100%;
+          }
+        }
+        .title{
+          font-size: 2.5rem;
+          color: white;
+          padding: 10px;
+        }
+        input{
+          text-align: right;
+          color: #aaa;
+          padding: 10px;
+          font-size: 1.3em;
+          font-family: Helvetica, Meiryo;
+          border: solid 1px #ccc;
+          border-radius: 5px;
+          &:focus{
+            border: solid 3px #eea34a;
+          }
+        }
+      }
     }
     .boxes{
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
       flex-wrap: wrap;
       @media screen and (max-width: 480px){
         width: 100%;
       }
       .box{
+        box-sizing: border-box;
         text-align: center;
-        width: 25%;
+        width: calc(33% - 10px);
         padding: 30px 30px;
         margin-bottom: 15px;
         border-radius: 5px;
@@ -47,13 +136,9 @@ main{
           text-align: center;
           display: flex;
           width: 100%;
-          .plus_button{
+          .plus_button, .minus_button{
             color: white;
             width: 50%;
-          }
-          .minus_button{
-            color: white;
-            width:50%;
           }
         }
       }
@@ -97,6 +182,19 @@ main{
         background-color: #8c8c8c;
       }
     }
+  }
+}
+
+footer{
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  background-color: #4c4c4c;
+  p{
+    color: white;
+    font-size: 1.5rem;
   }
 }
 

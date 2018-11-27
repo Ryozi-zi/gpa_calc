@@ -2,12 +2,13 @@ var app = new Vue({
   el: '#app',
   // dataの定義
   data: {
-    gpagot: 0,
-    creditsgot: 0,
+    gpagot: "",
+    creditsgot: "",
     credits: 0,
     allGpaSum: 0,
     gpaPoints: {
       // gpaの各ポイントの定義
+      ap: 4,
       a: 4,
       am: 3.7,
       bp: 3.3,
@@ -23,6 +24,7 @@ var app = new Vue({
     },
     gpa:{
       // 各gpaの獲得単位数
+      ap:0,
       a: 0,
       am: 0,
       bp: 0,
@@ -40,6 +42,9 @@ var app = new Vue({
   computed: {
     // GPAを算出
     GPAe: function () {
+      if( this.creditsgot === "" || this.creditsgot === 0 ){
+        return 0
+      }
       return Math.floor(this.sumGpaGrade / this.totalCredit * 100) / 100
     },
     // 総合獲得単位数を算出
@@ -63,7 +68,7 @@ var app = new Vue({
   },
   methods: {
     plusGrade: function ( grade ) {
-      this.gpa[grade]++
+      this.gpa[grade] = this.gpa[grade] + 3
     },
     minusGrade: function ( grade ){
       this.gpa[grade]--
