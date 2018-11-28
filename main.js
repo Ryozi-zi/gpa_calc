@@ -42,7 +42,7 @@ var app = new Vue({
   computed: {
     // GPAを算出
     GPAe: function () {
-      if( this.creditsgot === "" ){
+      if( isNaN(Math.floor(this.sumGpaGrade / this.totalCredit * 100) / 100) ){
         return 0
       }
       return Math.floor(this.sumGpaGrade / this.totalCredit * 100) / 100
